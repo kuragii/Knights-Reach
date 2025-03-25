@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Navbar */
+.navbar {
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  /*background: url('/path-to-your-image.png') no-repeat center; */
+  background-size: cover;
+}
+
+.hero h1 {
+  color: #ffcc00;
+  font-size: 50px;
+}
+
+.hero p {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.button.yellow {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.button.gray {
+  background-color: gray;
+}
+
+/* Donation Categories */
+.donation-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 10px;
+}
