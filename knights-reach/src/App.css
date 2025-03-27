@@ -272,7 +272,11 @@ body {
 
 .about-hero {
   position: relative;
-  background: url("/knights-reach/public/campus_overview.png") no-repeat center center/cover;
+  background-image: url("campus_overview.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   height: 60vh;
   display: flex;
   align-items: center;
