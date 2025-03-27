@@ -30,7 +30,7 @@ body {
 .hero {
   text-align: center;
   padding: 100px 20px;
-  /*background: url('/path-to-your-image.png') no-repeat center; */
+  background: url("./site_photos/a.png") no-repeat center;
   background-size: cover;
 }
 
@@ -272,7 +272,7 @@ body {
 
 .about-hero {
   position: relative;
-  background-image: url("campus_overview.png");
+  background-image: url("site_photos/campus_overview.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

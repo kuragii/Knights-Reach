@@ -94,12 +94,12 @@ export default function Home() {
                     {[
                         {
                             caption: "Earned by donating three items.",
-                            img: "/badge1.png",
+                            img: <img src="../site_photos/3_times_donator.png" alt="3 times donor" />,
                             title: "Friend",
                         },
                         {
                             caption: "Earned by donating five items.",
-                            img: "/badge2.png",
+                            img: <img src="../site_photos/pantry_angel.png" alt="Pantry Angel" />,
                             title: "Pantry Angel",
                         },
                         {
@@ -141,11 +141,6 @@ export default function Home() {
                             Welcome to Knights Reach! A platform designed to connect those in need with those who want to give...
                             <br />Together, we're creating a more efficient and compassionate way to support the Knights community!
                         </p>
-                        <div className="socials">
-                            <a href="#"><img src="/facebook-icon.png" alt="Facebook" /></a>
-                            <a href="#"><img src="/threads-icon.png" alt="Threads" /></a>
-                            <a href="#"><img src="/instagram-icon.png" alt="Instagram" /></a>
-                        </div>
                     </div>
 
                     <div className="footer-links">
