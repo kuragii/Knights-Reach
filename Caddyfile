@@ -1,0 +1,5 @@
+ http://3.137.183.67 {
+  root * /srv/react
+  file_server
+}
+
