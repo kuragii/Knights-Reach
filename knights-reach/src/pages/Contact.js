@@ -43,7 +43,7 @@ export default function Contact() {
             <header className="hero_contact">
                 <h1>Contact Us</h1>
                 <p>
-                    <Link to="/">Home</Link> <span> &gt; </span> <span className="active">Contact</span>
+                    <Link to="/" className={"yellow-link"}>Home</Link> <span> &gt; </span> <span className="active">Contact</span>
                 </p>
                 <div>
                     <Link to="/donation-form" className="button yellow">

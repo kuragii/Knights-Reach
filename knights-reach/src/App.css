@@ -272,23 +272,19 @@ body {
 }
 
 .about-hero {
-  position: relative;
-  background-image: url("site_photos/campus_overview.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    text-align: center;
+    color: #FFD700;
+    padding: 100px 20px;
+    background: url("./site_photos/campus_overview.png") no-repeat center;
+    background-size: cover;
+  }
+
 
 .about-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
   text-align: center;
-  color: white;
+  color:  #FFD700;
 }
 
 .about-overlay h1 {
@@ -387,14 +383,23 @@ body {
 /* Hero Section */
 .hero_contact {
   text-align: center;
+  color: #FFD700;
   padding: 100px 20px;
+
   background: url("./site_photos/Castle.png") no-repeat center;
   background-size: cover;
 }
 
 .hero_contact h1 {
-  color: #ffcc00;
-  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+  font-size: 3rem;
+  color:  #FFD700;
+}
+
+.yellow-link{
+  color:  #FFD700;
 }
 
 .hero_contact p {
@@ -611,4 +616,50 @@ body {
   background-color: #eab308; /* darker yellow */
 }
 
+.auth-form {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #fbc02d;
+  border-radius: 5px;
+}
+
+.auth-form .error {
+  color: red;
+  font-size: 0.9rem;
+}
+.profile-page {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-page h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.profile-page p {
+  font-size: 1.1rem;
+  color: #333;
+}
 
