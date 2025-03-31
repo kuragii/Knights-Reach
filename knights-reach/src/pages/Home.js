@@ -1,29 +1,14 @@
 ﻿import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 
 
 export default function Home() {
     return (
         <div>
-            {/* Navbar */}
-            <nav className="navbar">
-                <div className="nav-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
-                </div>
+            <Navbar />
 
-                <div className="logo">
-                    <img src="/Logo_1.png" alt="Knights Reach Logo" />
-                </div>
-
-                <div className="nav-links">
-                    <Link to="/volunteer">Volunteer</Link>
-                    <Link to="/donate">Donate</Link>
-                    <Link to="/request">Request</Link>
-                </div>
-            </nav>
 
 
             {/* Hero Section */}
@@ -31,8 +16,8 @@ export default function Home() {
                 <h1>Knights Reach</h1>
                 <p>This website is to help students at the University of Central Florida connect and donate items with each other.</p>
                 <div>
-                    <Link to="/donation-form" className="button yellow">Fill out the donation form</Link>
-                    <Link to="/volunteers" className="button gray">Volunteers</Link>
+                    <Link to="/donation" className="button yellow">Fill out the donation form</Link>
+                    <Link to="/Volunteer" className="button gray">Volunteers</Link>
                 </div>
             </header>
 
@@ -94,7 +79,8 @@ export default function Home() {
                     {[
                         {
                             caption: "Earned by donating three items.",
-                            img: <img src="../site_photos/3_times_donator.png" alt="3 times donor" />,
+                            imgSrc: "../site_photos/pantry_angel.png",
+                            imgAlt: "",
                             title: "Friend",
                         },
                         {

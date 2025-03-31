@@ -1,0 +1,90 @@
+﻿.volunteer-page {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.volunteer-hero {
+    background-color: #fff3e6;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.volunteer-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.volunteer-what {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.volunteer-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.volunteer-list li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.volunteer-note {
+    color: #444;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.volunteer-flexibility {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.volunteer-impact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.impact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.impact-grid div {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.impact-grid strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #e6b800;
+}
+
+.volunteer-cta {
+    background-color: #fff3e6;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.volunteer-cta .button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    background-color: #ffcc00;
+    color: #000;
+    border-radius: 6px;
+    font-weight: bold;
+}

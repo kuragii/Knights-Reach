@@ -1,6 +1,7 @@
 ﻿import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "../App.css";
+import Navbar from "./Navbar";
 
 export default function Register() {
     const navigate = useNavigate();
@@ -16,8 +17,8 @@ export default function Register() {
         try {
             const res = await fetch("http://localhost:3001/register", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, email, password }),
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({name, email, password}),
             });
 
             const data = await res.json();
@@ -35,44 +36,50 @@ export default function Register() {
     };
 
     return (
-        <div className="auth-form">
-            <h2>Register</h2>
-            <form onSubmit={handleRegister}>
-                <label>Name</label>
-                <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
+        <>
+           <Navbar />
 
-                <label>Email</label>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
 
-                <label>Password</label>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
+            {/* Register Form */}
+            <div className="auth-form">
+                <h2>Register</h2>
+                <form onSubmit={handleRegister}>
+                    <label>Name</label>
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
 
-                {error && <p className="error">{error}</p>}
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
 
-                <button type="submit" className="button yellow">Register</button>
-            </form>
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
 
-            <div className="auth-toggle">
-                <p>
-                    Already have an account?{" "}
-                    <a href="/login">Login</a>
-                </p>
+                    {error && <p className="error">{error}</p>}
+
+                    <button type="submit" className="button yellow">Register</button>
+                </form>
+
+                <div className="auth-toggle">
+                    <p>
+                        Already have an account?{" "}
+                        <Link to="/login">Login</Link>
+                    </p>
+                </div>
             </div>
-        </div>
+        </>
     );
 }

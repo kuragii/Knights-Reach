@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const faqs = [
     { question: "How to be a volunteer?", answer: "You can apply via our form on the Volunteer page. We’ll guide you through the steps!" },
@@ -20,24 +21,7 @@ export default function Contact() {
 
     return (
         <div>
-            {/* Navbar */}
-            <nav className="navbar">
-                <div className="nav-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
-                </div>
-
-                <div className="logo">
-                    <img src="/Logo_1.png" alt="Knights Reach Logo" />
-                </div>
-
-                <div className="nav-links">
-                    <Link to="/volunteer">Volunteer</Link>
-                    <Link to="/donate">Donate</Link>
-                    <Link to="/request">Request</Link>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Hero Section */}
             <header className="hero_contact">

@@ -1,9 +1,9 @@
 ﻿import React, { useState } from "react";
-import "./DonationForum.css";
+import "./RequestForum.css";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
-export default function DonationForum() {
+export default function RequestForum() {
     const [requests, setRequests] = useState([]);
     const [form, setForm] = useState({ title: "", description: "", category: "" });
 
@@ -23,8 +23,9 @@ export default function DonationForum() {
         <>
             <Navbar />
 
+
             <div className="forum-container">
-                <h1>Donation Requests</h1>
+                <h1>Registration Requests</h1>
 
                 {/* New Post Form */}
                 <form className="forum-form" onSubmit={handleSubmit}>

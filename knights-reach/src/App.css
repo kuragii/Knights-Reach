@@ -662,6 +662,16 @@ body {
   font-size: 1.1rem;
   color: #333;
 }
+
+.volunteer-hero {
+    text-align: center;
+    color: #FFD700;
+    padding: 100px 20px;
+    background: url("./site_photos/a.png") no-repeat center;
+    background-size: cover;
+  }
+
+
 .volunteer-info {
   max-width: 700px;
   margin: 40px auto;
@@ -690,4 +700,22 @@ body {
   font-size: 1rem;
   color: #444;
 }
+.nav-login-button {
+  font-weight: bold;
+  color: #fff;
+  background-color: #000000;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.nav-login-button:hover {
+  background-color: #000000;
+}
+.logo-img {
+
+ padding-left: 130px; /* Adjust the value as needed */
+}
+
 

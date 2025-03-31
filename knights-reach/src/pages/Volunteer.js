@@ -1,62 +1,57 @@
 ﻿import React from "react";
-import { Link } from "react-router-dom";
+import "./Volunteer.css";
 import "../App.css";
+import Navbar from "./Navbar"; // or Volunteer.css if you separate it
 
 export default function Volunteer() {
     return (
         <div className="volunteer-page">
-            {/* Navbar */}
-            <nav className="navbar">
-                <div className="nav-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
-                </div>
+            {/* Hero / Intro Section */}
 
-                <div className="logo">
-                    <img src="/Logo_1.png" alt="Knights Reach Logo" />
-                </div>
+            <Navbar />
 
-                <div className="nav-links">
-                    <Link to="/volunteer">Volunteer</Link>
-                    <Link to="/donate">Donate</Link>
-                    <Link to="/request">Request</Link>
-                </div>
-            </nav>
-
-            {/* Hero */}
-            <header className="hero">
+            <section className="volunteer-hero">
                 <h1>Become a Volunteer</h1>
-                <p>
-                    Join Knights Reach in making a difference! As a volunteer, you'll help distribute items,
-                    organize drives, and support fellow students in need.
-                </p>
-                <div>
-                    <Link to="/register" className="button yellow">
-                        Sign Up to Volunteer
-                    </Link>
-                </div>
-            </header>
+                <p>Make an impact on campus by giving your time and energy to fellow Knights in need.</p>
+            </section>
 
-            {/* Volunteer Info Section */}
-            <section className="volunteer-info">
+            {/* What You'll Do */}
+            <section className="volunteer-what">
                 <h2>What You'll Do</h2>
-                <ul>
+                <ul className="volunteer-list">
                     <li>🍎 Help sort and distribute food and supplies</li>
                     <li>📦 Assist with donation events on campus</li>
                     <li>🤝 Connect students to the resources they need</li>
                 </ul>
-
-                <p className="volunteer-cta-text">
-                    No matter your schedule, there's a place for you on our team. Thank you for supporting
-                    your fellow Knights!
+                <p className="volunteer-note">
+                    No matter your schedule, there's a place for you on our team.
+                    Thank you for supporting your fellow Knights!
                 </p>
             </section>
 
-            {/* Banner */}
-            <div className="contact-banner">
+            {/* Schedule Flexibility */}
+            <section className="volunteer-flexibility">
+                <h2>Flexible Schedules</h2>
+                <p>Whether you can volunteer once a week or once a semester, we’ll work with your schedule!</p>
+            </section>
+
+            {/* Impact Stats */}
+            <section className="volunteer-impact">
+                <h2>Your Impact</h2>
+                <div className="impact-grid">
+                    <div><strong>69,818</strong><span>Students Supported</span></div>
+                    <div><strong>370</strong><span>Donations Collected</span></div>
+                    <div><strong>385</strong><span>Requests Fulfilled</span></div>
+                    <div><strong>50</strong><span>Campus Events</span></div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="volunteer-cta">
                 <h2>Ready to Lend a Hand?</h2>
-            </div>
+                <p>Click below to fill out our volunteer interest form and we'll follow up with more details.</p>
+                <a href="/volunteer-form" className="button yellow">Sign Up to Volunteer</a>
+            </section>
         </div>
     );
 }

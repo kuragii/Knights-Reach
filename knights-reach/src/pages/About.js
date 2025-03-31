@@ -1,28 +1,12 @@
 ﻿import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css"
+import Navbar from "./Navbar";
 
 export default function About() {
     return (
         <div>
-            {/* Navbar */}
-            <nav className="navbar">
-                <div className="nav-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
-                </div>
-
-                <div className="logo">
-                    <img src="/Logo_1.png" alt="Knights Reach Logo" />
-                </div>
-
-                <div className="nav-links">
-                    <Link to="/volunteer">Volunteer</Link>
-                    <Link to="/donate">Donate</Link>
-                    <Link to="/request">Request</Link>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Hero Section */}
             <section className="about-hero">

@@ -1,6 +1,7 @@
 ﻿import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../App.css"; // import your styles
+import {Link, useNavigate} from "react-router-dom";
+import "../App.css";
+import Navbar from "./Navbar"; // import your styles
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -15,8 +16,8 @@ export default function Login() {
         try {
             const res = await fetch("http://localhost:3001/login", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password }),
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({email, password}),
             });
 
             const data = await res.json();
@@ -33,32 +34,36 @@ export default function Login() {
     };
 
     return (
-        <div className="auth-form">
-            <h2>Login</h2>
-            <form onSubmit={handleLogin}>
-                <label>Email</label>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
+        <>
+            <Navbar />
 
-                <label>Password</label>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
+            {/* Login Form */}
+            <div className="auth-form">
+                <h2>Login</h2>
+                <form onSubmit={handleLogin}>
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
 
-                <p>Don't have an account? <a href="/register">Register</a></p>
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
 
+                    <p>Don't have an account? <a href="/register">Register</a></p>
 
-                {error && <p className="error">{error}</p>}
+                    {error && <p className="error">{error}</p>}
 
-                <button type="submit" className="button yellow">Login</button>
-            </form>
-        </div>
+                    <button type="submit" className="button yellow">Login</button>
+                </form>
+            </div>
+        </>
     );
 }

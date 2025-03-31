@@ -1,5 +1,6 @@
 ﻿import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default function Profile() {
     const [user, setUser] = useState(null);
@@ -35,9 +36,14 @@ export default function Profile() {
     if (!user) return <p>Loading profile...</p>;
 
     return (
-        <div className="profile-page">
-            <h2>Welcome, {user.name}!</h2>
-            <p>Email: {user.email}</p>
-        </div>
+        <>
+           <Navbar />
+
+            {/* Profile Content */}
+            <div className="profile-page">
+                <h2>Welcome, {user.name}!</h2>
+                <p>Email: {user.email}</p>
+            </div>
+        </>
     );
 }
