@@ -1,0 +1,41 @@
+# Binaries and build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go build output
+/build/
+bin/
+*.log
+
+# Go mod workspace (optional)
+/go.work
+
+# Dependency directories
+/vendor/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+
+# Env & Secrets
+.env
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-compose.*
+*.env.local
+
+# Caddy
+Caddyfile
+
+# Temp or backup files
+*.tmp
+*.bak
+*.cache
+
