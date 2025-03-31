@@ -7,6 +7,8 @@ import Donate from "./pages/DonationForum";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
+import Volunteer from "./pages/Volunteer";
+
 import "./App.css";
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/volunteer" element={<Volunteer />} />
                 <Route path={"/donate"} element={<Donate />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/profile" element={<Profile />} />
