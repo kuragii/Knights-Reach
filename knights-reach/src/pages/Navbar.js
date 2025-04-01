@@ -4,14 +4,8 @@ import "./Navbar.css"
 import "../App.css";
 
 export default function Navbar({ user, setUser }) {
-    const [showDropdown, setShowDropdown] = useState(false);
     const navigate = useNavigate();
 
-    const handleSignOut = () => {
-        localStorage.removeItem("token");
-        setUser(null);
-        navigate("/");
-    };
 
     return (
         <nav className="navbar">
@@ -30,29 +24,8 @@ export default function Navbar({ user, setUser }) {
                 <Link to="/donate">Donate</Link>
                 <Link to="/request">Request</Link>
 
-                <div className="user-dropdown" onClick={() => setShowDropdown(!showDropdown)}>
-                    <div className="user-icon">
-                        {user?.name?.charAt(0).toUpperCase() || "👤"}
-                    </div>
 
-
-                    {showDropdown && (
-                        <div className="dropdown-menu">
-                            {user ? (
-                                <>
-                                    <Link to="/profile">Profile</Link>
-                                    <button onClick={handleSignOut}>Sign Out</button>
-                                </>
-                            ) : (
-                                <>
-                                    <Link to="/login">Sign In</Link>
-                                    <Link to="/register">Register</Link>
-                                </>
-                            )}
-                        </div>
-                    )}
                 </div>
-            </div>
         </nav>
     );
 }

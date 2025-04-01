@@ -5,7 +5,13 @@ import Navbar from "./Navbar";
 
 export default function RequestForum() {
     const [requests, setRequests] = useState([]);
-    const [form, setForm] = useState({ title: "", description: "", category: "" });
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        title: "",
+        description: "",
+        category: "",
+    });
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,9 +19,10 @@ export default function RequestForum() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (form.title && form.description) {
+        const { name, email, title, description } = form;
+        if (name && email && title && description) {
             setRequests([{ ...form, id: Date.now() }, ...requests]);
-            setForm({ title: "", description: "", category: "" });
+            setForm({ name: "", email: "", title: "", description: "", category: "" });
         }
     };
 
@@ -23,12 +30,27 @@ export default function RequestForum() {
         <>
             <Navbar />
 
-
             <div className="forum-container">
-                <h1>Registration Requests</h1>
+                <h1>Requests</h1>
 
                 {/* New Post Form */}
                 <form className="forum-form" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={form.name}
+                        onChange={handleChange}
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
+                    />
                     <input
                         type="text"
                         name="title"
@@ -45,7 +67,11 @@ export default function RequestForum() {
                         onChange={handleChange}
                         required
                     />
-                    <select name="category" value={form.category} onChange={handleChange}>
+                    <select
+                        name="category"
+                        value={form.category}
+                        onChange={handleChange}
+                    >
                         <option value="">Select a category</option>
                         <option value="Clothing">Clothing</option>
                         <option value="Food">Food</option>
@@ -66,6 +92,9 @@ export default function RequestForum() {
                                 <h3>{req.title}</h3>
                                 {req.category && <span className="forum-tag">{req.category}</span>}
                                 <p>{req.description}</p>
+                                <div className="forum-meta">
+                                    <strong>Requested by:</strong> {req.name} ({req.email})
+                                </div>
                             </div>
                         ))
                     )}

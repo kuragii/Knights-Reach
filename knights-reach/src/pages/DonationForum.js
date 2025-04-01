@@ -5,7 +5,13 @@ import Navbar from "./Navbar";
 
 export default function DonationForum() {
     const [requests, setRequests] = useState([]);
-    const [form, setForm] = useState({ title: "", description: "", category: "" });
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        title: "",
+        description: "",
+        category: "",
+    });
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,9 +19,10 @@ export default function DonationForum() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (form.title && form.description) {
+        const { name, email, title, description } = form;
+        if (name && email && title && description) {
             setRequests([{ ...form, id: Date.now() }, ...requests]);
-            setForm({ title: "", description: "", category: "" });
+            setForm({ name: "", email: "", title: "", description: "", category: "" });
         }
     };
 
@@ -30,15 +37,31 @@ export default function DonationForum() {
                 <form className="forum-form" onSubmit={handleSubmit}>
                     <input
                         type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={form.name}
+                        onChange={handleChange}
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
+                    />
+                    <input
+                        type="text"
                         name="title"
-                        placeholder="Title (e.g., Need winter clothes for kids)"
+                        placeholder="Title (e.g., Donating winter coats)"
                         value={form.title}
                         onChange={handleChange}
                         required
                     />
                     <textarea
                         name="description"
-                        placeholder="Describe your request..."
+                        placeholder="Describe your donation..."
                         rows="4"
                         value={form.description}
                         onChange={handleChange}
@@ -65,6 +88,9 @@ export default function DonationForum() {
                                 <h3>{req.title}</h3>
                                 {req.category && <span className="forum-tag">{req.category}</span>}
                                 <p>{req.description}</p>
+                                <div className="forum-meta">
+                                    <strong>Donated by:</strong> {req.name} ({req.email})
+                                </div>
                             </div>
                         ))
                     )}

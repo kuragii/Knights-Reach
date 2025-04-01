@@ -16,7 +16,7 @@ export default function Home() {
                 <h1>Knights Reach</h1>
                 <p>This website is to help students at the University of Central Florida connect and donate items with each other.</p>
                 <div>
-                    <Link to="/donation" className="button yellow">Fill out the donation form</Link>
+                    <Link to="/donate" className="button yellow">Fill out the donation form</Link>
                     <Link to="/Volunteer" className="button gray">Volunteers</Link>
                 </div>
             </header>
@@ -27,9 +27,9 @@ export default function Home() {
                     { title: "Food", icon: "🍎" },
                     { title: "Textbooks", icon: "📚" },
                     { title: "Clothing", icon: "👕" },
-                    { title: "Drinks", icon: "🍎" },
-                    { title: "Personal Items", icon: "📚" },
-                    { title: "Hygiene Supplies", icon: "👕" },
+                    { title: "Drinks", icon: "☕" },
+                    { title: "Personal Items", icon: "🎒" },
+                    { title: "Hygiene Supplies", icon: "🪥" },
                 ].map((item, index) => (
                     <div key={index} className="card">
                         <div className="icon">{item.icon}</div>
@@ -55,6 +55,10 @@ export default function Home() {
                             Your generosity is the backbone of the community. Thank you!
                         </p>
                     </div>
+                    <div className="button-group">
+                        <Link to="/donate" className="button yellow">Complete this form!</Link>
+                        <Link to="/about" className="button gray">Learn More</Link>
+                    </div>
 
                     <div className="text-block">
                         <h3>Request for a donation</h3>
@@ -64,8 +68,8 @@ export default function Home() {
                     </div>
 
                     <div className="button-group">
-                        <Link to="/donation-form" className="button yellow">Complete this form!</Link>
-                        <Link to="/learn-more" className="button gray">Learn More</Link>
+                        <Link to="/request" className="button yellow">Complete this form!</Link>
+                        <Link to="/about" className="button gray">Learn More</Link>
                     </div>
                 </div>
             </section>
