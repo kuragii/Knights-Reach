@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
@@ -19,25 +19,25 @@ export default function Home() {
                     <Link to="/donate" className="button yellow">Fill out the donation form</Link>
                     <Link to="/Volunteer" className="button gray">Volunteers</Link>
                 </div>
-            </header>
+                {/* Donation Categories */}
+                <section className="donation-section">
+                    {[
+                        { title: "Food", icon: "🍎" },
+                        { title: "Textbooks", icon: "📚" },
+                        { title: "Clothing", icon: "👕" },
+                        { title: "Drinks", icon: "☕" },
+                        { title: "Personal Items", icon: "🎒" },
+                        { title: "Hygiene Supplies", icon: "🪥" },
+                    ].map((item, index) => (
+                        <div key={index} className="card">
+                            <div className="icon">{item.icon}</div>
+                            <h3>{item.title}</h3>
+                            <Link to="/donate" className="button yellow">Make a donation</Link>
+                        </div>
+                    ))}
+                </section>
 
-            {/* Donation Categories */}
-            <section className="donation-section">
-                {[
-                    { title: "Food", icon: "🍎" },
-                    { title: "Textbooks", icon: "📚" },
-                    { title: "Clothing", icon: "👕" },
-                    { title: "Drinks", icon: "☕" },
-                    { title: "Personal Items", icon: "🎒" },
-                    { title: "Hygiene Supplies", icon: "🪥" },
-                ].map((item, index) => (
-                    <div key={index} className="card">
-                        <div className="icon">{item.icon}</div>
-                        <h3>{item.title}</h3>
-                        <Link to="/donate" className="button yellow">Make a donation</Link>
-                    </div>
-                ))}
-            </section>
+            </header>
 
             {/* Help Section */}
             <section className="help-section">
