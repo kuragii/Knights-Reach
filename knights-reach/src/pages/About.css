@@ -1,4 +1,4 @@
-﻿.about-hero {
+.about-hero {
     text-align: center;
     color: #FFD700;
     padding: 100px 20px;
@@ -19,7 +19,7 @@
 }
 
 .about-overlay p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #FFD700;
 }
 
@@ -40,13 +40,14 @@
 }
 
 .about-content h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 20px;
 }
 
 .about-content p {
     margin-bottom: 20px;
     line-height: 1.6;
+    font-size: 1.5rem;
 }
 .about-list {
     list-style: none;
@@ -54,12 +55,12 @@
     margin: 0 auto 20px;
     max-width: 600px;
     text-align: left;
-    color: #FFD700;
+    color: #000000;
 }
 
 .about-list li {
     margin-bottom: 15px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
 }
@@ -84,13 +85,14 @@
     background-color: #e6c200;
 }
 .about-box {
-    background-color: #ffffff;
+    background: linear-gradient(45deg, #ffcc00, #fdf6ed);
     border-radius: 12px;
     padding: 40px 30px;
     margin: 40px auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     max-width: 900px;
 }
+/*fdf6ed*/
 
 .about-footer {
     text-align: center;
