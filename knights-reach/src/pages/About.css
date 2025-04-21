@@ -104,3 +104,19 @@
     margin-top: 60px;
 }
 
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Set a specific height, or adjust as needed */
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%;  /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    max-width: 600px; /* Maximum width for the iframe */
+    max-height: 450px; /* Maximum height for the iframe */
+    border: none;
+}

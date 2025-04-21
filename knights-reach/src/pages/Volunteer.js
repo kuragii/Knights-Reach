@@ -3,6 +3,44 @@ import "./Volunteer.css";
 import "../App.css";
 import Navbar from "./Navbar"; // or Volunteer.css if you separate it
 
+const Calendar = ({ onDateClick }) => {
+    const [currentDate, setCurrentDate] = React.useState(new Date());
+
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    const firstDay = new Date(year, month, 1).getDay();
+    const lastDate = new Date(year, month + 1, 0).getDate();
+
+    const days = Array.from({ length: firstDay }, () => null).concat(
+        Array.from({ length: lastDate }, (_, i) => i + 1)
+    );
+
+    return (
+        <div className="calendar">
+            <div className="header">
+                <button onClick={() => setCurrentDate(new Date(year, month - 1, 1))}>‹</button>
+                <h3>{currentDate.toLocaleString('default', { month: 'long' })} {year}</h3>
+                <button onClick={() => setCurrentDate(new Date(year, month + 1, 1))}>›</button>
+            </div>
+            <div className="weekdays">
+                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => <div key={d}>{d}</div>)}
+            </div>
+            <div className="dates">
+                {days.map((d, i) => (
+                    <div
+                        key={i}
+                        className={`date ${d ? 'active' : 'empty'}`}
+                        onClick={() => d && onDateClick?.(new Date(year, month, d))}
+                    >
+                        {d || ''}
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+
 export default function Volunteer() {
     return (
         <div className="volunteer-page">
@@ -34,6 +72,13 @@ export default function Volunteer() {
                 <h2>Flexible Schedules</h2>
                 <p>Whether you can volunteer once a week or once a semester, we’ll work with your schedule!</p>
             </section>
+
+            {/* Calendar Section */}
+<section className="volunteer-calendar">
+    <h2 style={{ textAlign: 'center' }}>Pick a Date to Help</h2>
+    <Calendar onDateClick={(date) => alert(`You picked: ${date.toDateString()}`)} />
+</section>
+
 
             {/* Impact Stats */}
             <section className="volunteer-impact">
