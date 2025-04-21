@@ -160,7 +160,7 @@ export default function Home() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>Copyright © 2025 – WordPress Theme by Creative Themes</p>
+                    <p>Copyright © 2025</p>
                 </div>
             </footer>
 
