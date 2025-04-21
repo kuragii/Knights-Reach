@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import TenTimesDonorImg from '../site_photos/10timesdonor.png';
+import ThreeDaysDonorImg from '../site_photos/3timesdonor.webp';
+import PantryDonorImg from '../site_photos/pantryangel.webp';
+
 
 
 
@@ -83,28 +87,28 @@ export default function Home() {
                     {[
                         {
                             caption: "Earned by donating three items.",
-                            imgSrc: "../site_photos/pantry_angel.png",
-                            imgAlt: "",
+                            imgSrc: ThreeDaysDonorImg,
                             title: "Friend",
                         },
                         {
                             caption: "Earned by donating five items.",
-                            img: <img src="../site_photos/pantry_angel.png" alt="Pantry Angel" />,
+                            imgSrc:  PantryDonorImg,
                             title: "Pantry Angel",
                         },
                         {
                             caption: "Earned by donating ten items.",
-                            img: "/badge3.png",
+                            imgSrc: TenTimesDonorImg,
                             title: "Philanthropist",
                         },
                     ].map((badge, index) => (
-                        <div className="badge-card" key={index}>
-                            <p className="badge-caption">{badge.caption}</p>
-                            <img src={badge.img} alt={badge.title} />
-                            <p className="badge-title">{badge.title}</p>
+                        <div key={index} className="badge">
+                            <img src={badge.imgSrc} alt={badge.title} style={{ width: '100px', height: '100px' }} />
+                            <h3>{badge.title}</h3>
+                            <p>{badge.caption}</p>
                         </div>
                     ))}
                 </div>
+
             </section>
 
             {/* Stats Bar */}
