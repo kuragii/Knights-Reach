@@ -160,7 +160,7 @@ export default function Home() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>Copyright © 2025</p>
+                    <p>© 2025 Knights Reach — Built with 💛 at UCF</p>
                 </div>
             </footer>
 

@@ -94,9 +94,15 @@ export default function Volunteer() {
             {/* CTA */}
             <section className="volunteer-cta">
                 <h2>Ready to Lend a Hand?</h2>
-                <p>Click below to fill out our volunteer interest form and we'll follow up with more details.</p>
-                <a href="/volunteer-form" className="button yellow">Sign Up to Volunteer</a>
+                <p>Click below to let us know you're interested, and we'll be in touch soon!</p>
+                <button
+                    className="button yellow"
+                    onClick={() => alert("We're so excited you're ready to get involved in making your Knight community better! As soon as we're accepting volunteers, we'll make an announcement.")}
+                >
+                    Sign Up to Volunteer
+                </button>
             </section>
+
         </div>
     );
 }

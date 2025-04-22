@@ -197,7 +197,7 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>Copyright © 2025 – WordPress Theme by Creative Themes</p>
+                    <p>© 2025 Knights Reach — Built with 💛 at UCF</p>
                 </div>
             </footer>
         </div>
