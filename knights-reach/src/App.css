@@ -30,7 +30,7 @@ body {
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background: url("./site_photos/home_banner.png") no-repeat center;
+  background: url("./site_photos/apple.png") no-repeat center;
   background-position: center 10%;
   background-size: cover;
 }
